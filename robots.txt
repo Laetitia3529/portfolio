@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: [INSÈRE TON URL ICI]/sitemap.xml
