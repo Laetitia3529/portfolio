@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
 
-  <title>[Ton prénom et nom] — Testeur de logiciels / QA (Vitré, France)</title>
-  <meta name="description" content="Portfolio one-page de [Ton prénom et nom], testeur de logiciels / QA junior à Vitré (France) : compétences, expériences, projets de test, exemples de cas de test, contact." />
+  <title>Laëtitia Domenger — Testeuse logiciels / QA (Rennes, France)</title>
+  <meta name="description" content="Portfolio one-page de Laëtitia Domenger, testeuse logiciels / QA à Rennes (France) : projets de test, exemples concrets, contact." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="[INSÈRE TON URL ICI]" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="[Ton prénom et nom] — Testeur de logiciels / QA" />
+  <meta property="og:title" content="Laëtitia Domenger — Testeuse logiciels / QA" />
   <meta property="og:description" content="Profil QA junior : tests manuels, début en automatisation (Playwright, Python), expériences, projets, exemples de tests, contact." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
@@ -20,7 +20,7 @@
 
   <!-- Twitter (optionnel) -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="[Ton prénom et nom] — Testeur de logiciels / QA" />
+  <meta name="twitter:title" content="Laëtitia Domenger — Testeuse logiciels / QA" />
   <meta name="twitter:description" content="Portfolio QA junior : compétences, expériences, projets, exemples de tests, contact." />
   <meta name="twitter:image" content="[INSÈRE UNE IMAGE TWITTER ICI - optionnel]" />
 
@@ -336,6 +336,12 @@
       gap: 14px;
     }
 
+    .projects-list{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
     .skill{
       padding: 14px;
       border-radius: var(--radius-sm);
@@ -410,6 +416,113 @@
       color: rgba(11, 78, 162, 0.95);
       font-size: 0.86rem;
       font-weight: 600;
+    }
+
+    .project{
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      background: rgba(255,255,255,0.72);
+      overflow: hidden;
+    }
+    .project > summary{
+      list-style: none;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 12px;
+      padding: 14px;
+      align-items: center;
+      user-select: none;
+    }
+    .project > summary::-webkit-details-marker{ display: none; }
+    .project > summary:focus-visible{
+      outline: 3px solid rgba(11,78,162,0.25);
+      outline-offset: -3px;
+      border-radius: var(--radius-sm);
+    }
+    .project:hover{
+      border-color: rgba(11,78,162,0.22);
+    }
+    .project[open]{
+      border-color: rgba(11,78,162,0.26);
+      box-shadow: 0 10px 26px rgba(11,78,162,0.10);
+    }
+    .project-visual{
+      width: 110px;
+      height: 84px;
+      border-radius: 12px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(11,78,162,0.16), rgba(15,118,110,0.14));
+      display: grid;
+      place-items: center;
+      color: rgba(11,78,162,0.95);
+    }
+    .project-visual svg{ width: 34px; height: 34px; }
+    .project-visual img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: inherit;
+    }
+    .project-title{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .project-title a{
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .project-title a:hover{ text-decoration-thickness: 2px; }
+    .project-title h3{
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .project-hint{
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .project[open] .project-hint{
+      color: rgba(11, 78, 162, 0.95);
+    }
+    .project .when-open{ display: none; }
+    .project[open] .when-open{ display: inline; }
+    .project[open] .when-closed{ display: none; }
+    .project-body{
+      padding: 0 14px 14px;
+    }
+    .project-body p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .project-body .meta{
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 460px){
+      .project > summary{
+        grid-template-columns: 1fr;
+      }
+      .project-visual{
+        width: 100%;
+        height: 92px;
+      }
+      .project-title{
+        justify-content: flex-start;
+      }
     }
 
     /* Table */
@@ -563,11 +676,11 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "[Ton prénom et nom]",
-    "jobTitle": "Testeur de logiciels / QA",
+    "name": "Laëtitia Domenger",
+    "jobTitle": "Testeuse logiciels / QA",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Vitré",
+      "addressLocality": "Rennes",
       "addressCountry": "FR"
     },
     "url": "[INSÈRE TON URL ICI]",
@@ -585,8 +698,8 @@
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Retour en haut de la page">
-          <strong>[Ton prénom et nom]</strong>
-          <span>QA junior — Vitré, France</span>
+          <strong>Laëtitia Domenger</strong>
+          <span>Testeuse logiciels / QA — Rennes, France</span>
         </a>
 
         <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="navLinks">
@@ -595,12 +708,7 @@
 
         <nav class="nav-links" id="navLinks">
           <a href="#profil">Profil</a>
-          <a href="#apropos">À propos</a>
-          <a href="#competences">Compétences</a>
-          <a href="#experiences">Expériences</a>
-          <a href="#projets">Projets</a>
-          <a href="#portfolio">Exemples de test</a>
-          <a class="nav-cta" href="#contact">Contact</a>
+          <a class="nav-cta" href="#projets">Projets</a>
         </nav>
       </div>
     </div>
@@ -611,24 +719,24 @@
     <section id="profil" class="card reveal" aria-labelledby="hero-title">
       <div class="hero">
         <div>
-          <h1 id="hero-title">Testeur de logiciels / QA</h1>
+          <h1 id="hero-title">Testeuse logiciels / QA</h1>
           <p class="subtitle">
             Garant de la qualité, curieux et rigoureux.
             <!-- TODO: Remplace ce texte par ta phrase d’accroche -->
             <br />
-            <strong>[INSÈRE TA PHRASE D’ACCROCHE ICI]</strong>
+            <strong>Professionnelle en reconversion avec une formation solide en tests logiciels, motivée à contribuer à la qualité des solutions numériques.</strong>
           </p>
 
           <div class="hero-actions" role="group" aria-label="Actions principales">
-            <a class="btn btn-primary" href="#apropos">Voir mon profil</a>
-            <a class="btn btn-ghost" href="#contact">Contact</a>
+            <a class="btn btn-ghost" href="#projets">Voir mes projets</a>
+            <a class="btn btn-primary" href="mailto:laetitia.domenger@gmail.com">Voir le contact</a>
           </div>
 
           <div class="meta" aria-label="Informations clés">
-            <span class="pill">Vitré, France</span>
+            <span class="pill">Rennes, France</span>
             <span class="pill">Formation ENI (Chartres de Bretagne)</span>
-            <span class="pill">Préparation ISTQB</span>
-            <span class="pill">Début en automatisation : Playwright, Python</span>
+            <span class="pill">ISTQB en cours</span>
+            <span class="pill">Automatisation : Playwright, Selenium, Python</span>
           </div>
         </div>
 
@@ -637,160 +745,27 @@
             <h3>Ce que je cherche</h3>
             <p>
               <!-- TODO: Ajuste selon ton objectif -->
-              Ouvert à des opportunités en <strong>CDI</strong> ou en <strong>freelance</strong> sur des missions QA.
+              Je recherche un poste en <strong>CDD</strong>, <strong>CDI</strong> (temps plein ou partiel) ou un contrat <strong>POEI</strong>.
             </p>
           </div>
           <div class="mini">
             <h3>Ce que j’apporte</h3>
             <p>
-              Rigueur, attention aux détails, curiosité numérique et une approche structurée (tests, tickets, documentation).
+              Cheffe d’entreprise reconvertie dans le test logiciel : je cherche l’impact concret (protéger l’utilisateur, améliorer les parcours).
+              <br />Sensible à l’accessibilité : vigilance pour que personne ne soit laissé de côté dans le numérique.
+              <br />Engagée aussi hors écran : comité d’éthique, accompagnement de personnes en situation de handicap vers l’emploi, formée PSSM.
+              <br />Diplômée ENI (Chartres‑de‑Bretagne) ; préparation ISTQB avec détermination.
             </p>
           </div>
           <div class="mini">
             <h3>Actuellement</h3>
             <p>
               <!-- TODO: Mets à jour ce bloc au fil du temps -->
-              [INSÈRE CE QUE TU APPRENDS/FAIS EN CE MOMENT : Playwright, ISTQB, projet perso…]
+              Sortie de formation <strong>Testeur de Logiciel (ENI)</strong>.
+              <br />Engagements bénévoles (coopérative, comité d’éthique, réseau d’accompagnement) et formation <strong>PSSM</strong>.
             </p>
           </div>
         </aside>
-      </div>
-    </section>
-
-    <!-- À PROPOS -->
-    <section id="apropos" class="card reveal" aria-labelledby="about-title">
-      <div class="section-head">
-        <h2 id="about-title">À propos de moi</h2>
-        <p>Parcours, posture et manière de travailler</p>
-      </div>
-      <div class="section-body">
-        <div class="grid-2">
-          <div class="item">
-            <div class="top">
-              <h3>Parcours</h3>
-              <span class="tag">Reconversion</span>
-            </div>
-            <p>
-              Je viens d’un parcours en coiffure artisanale, puis j’ai entamé une reconversion vers le test logiciel.
-              J’ai suivi une formation à l’ENI (Chartres de Bretagne), je prépare la certification ISTQB, et je débute
-              l’automatisation avec Playwright et Python.
-            </p>
-            <p style="margin-top:10px;">
-              <!-- TODO: Personnalise ce paragraphe -->
-              [INSÈRE TA DESCRIPTION ICI : ce qui t’a motivé(e), ce que tu aimes dans la QA, ton type de missions…]
-            </p>
-          </div>
-
-          <div class="item">
-            <div class="top">
-              <h3>Ce qui me caractérise</h3>
-              <span class="tag">Méthode</span>
-            </div>
-            <p>
-              Je valorise la <strong>reconnaissance des apprentissages</strong>, la rigueur et l’attention aux détails.
-              J’avance avec une curiosité numérique pragmatique : comprendre un besoin, tester, documenter, et améliorer.
-            </p>
-            <div class="meta" aria-label="Mots-clés">
-              <span class="chip">Rigueur</span>
-              <span class="chip">Attention aux détails</span>
-              <span class="chip">Curiosité numérique</span>
-              <span class="chip">Esprit critique</span>
-              <span class="chip">Communication</span>
-              <span class="chip">Documentation</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPÉTENCES -->
-    <section id="competences" class="card reveal" aria-labelledby="skills-title">
-      <div class="section-head">
-        <h2 id="skills-title">Compétences</h2>
-        <p>Tests manuels, début d’automatisation, outils et soft skills</p>
-      </div>
-
-      <div class="section-body">
-        <div class="grid-3" role="list">
-          <div class="skill" role="listitem">
-            <h3>Test manuel</h3>
-            <ul>
-              <li>Conception de cas de test (scénarios, prérequis, critères)</li>
-              <li>Analyse de besoins et lecture de spécifications</li>
-              <li>Déclaration de bugs, reproduction, priorisation</li>
-              <li>Rédaction de rapports et synthèses de test</li>
-              <li>Tests exploratoires</li>
-            </ul>
-          </div>
-
-          <div class="skill" role="listitem">
-            <h3>Test automatisé (début)</h3>
-            <ul>
-              <li>Playwright (TypeScript) : parcours E2E, assertions, sélecteurs</li>
-              <li>Python : scripts simples, bases d’automatisation</li>
-              <li>Structuration : données de test, organisation des suites</li>
-              <li>Bonnes pratiques : fiabilité, lisibilité, maintenance</li>
-            </ul>
-          </div>
-
-          <div class="skill" role="listitem">
-            <h3>Outils & collaboration</h3>
-            <ul>
-              <li>Jira / tickets (suivi, états, clarification)</li>
-              <li>Confluence / documentation</li>
-              <li>Git (bases : commit, branche, PR)</li>
-              <li>Communication : retours clairs, faits observables</li>
-              <li>Travail en équipe, esprit critique</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPÉRIENCES -->
-    <section id="experiences" class="card reveal" aria-labelledby="xp-title">
-      <div class="section-head">
-        <h2 id="xp-title">Expériences</h2>
-        <p>Ce que j’ai fait et ce que ça m’a appris (utile en QA)</p>
-      </div>
-      <div class="section-body">
-        <div class="timeline">
-          <article class="item">
-            <div class="top">
-              <h3>Coiffure artisanale / auto‑entreprise</h3>
-              <span class="tag">Expérience pro</span>
-            </div>
-            <p>
-              Expérience longue en relation client, discipline, organisation, précision et gestion des priorités.
-              Compétences transposables en QA : écoute, rigueur, sens du détail, capacité à expliquer clairement.
-            </p>
-            <div class="meta" aria-label="Compétences transférées">
-              <span class="chip">Organisation</span>
-              <span class="chip">Précision</span>
-              <span class="chip">Gestion des priorités</span>
-              <span class="chip">Communication</span>
-            </div>
-          </article>
-
-          <article class="item">
-            <div class="top">
-              <h3>Formation QA — ENI (Chartres de Bretagne)</h3>
-              <span class="tag">Formation</span>
-            </div>
-            <p>
-              Mise en pratique des fondamentaux : stratégie de test, rédaction de cas, cycle de vie d’un bug, outils de suivi,
-              documentation et communication avec une équipe projet.
-              <!-- TODO: Ajoute ici ce que tu as réellement fait pendant la formation -->
-              <br /><strong>[INSÈRE TON CAS D’ÉTUDE / PROJET QA DE FORMATION ICI]</strong>
-            </p>
-            <div class="meta" aria-label="Axes">
-              <span class="chip">Test planning</span>
-              <span class="chip">Bug reporting</span>
-              <span class="chip">Traçabilité</span>
-              <span class="chip">Documentation</span>
-            </div>
-          </article>
-        </div>
       </div>
     </section>
 
@@ -801,203 +776,171 @@
         <p>Quelques exemples (réels ou fictifs) pour illustrer ma méthode</p>
       </div>
       <div class="section-body">
-        <div class="grid-3" role="list">
-          <article class="item" role="listitem">
-            <div class="top">
-              <h3>Test d’une application de gestion de rendez‑vous</h3>
-              <span class="tag">Manuel</span>
-            </div>
-            <p>
-              <strong>Contexte :</strong> application web avec prise de RDV, annulation, notifications.
-              <br /><strong>Rôle :</strong> définition des scénarios, tests exploratoires, déclaration de bugs.
-              <br /><strong>Outils :</strong> Jira, Confluence.
-              <br /><strong>Résultat :</strong> amélioration de la compréhension des risques et des parcours critiques.
-              <!-- NOTE: Pas de chiffres inventés ici -->
-            </p>
-            <div class="meta">
-              <span class="chip">Parcours critiques</span>
-              <span class="chip">Risque</span>
-              <span class="chip">Tickets</span>
-            </div>
-          </article>
-
-          <article class="item" role="listitem">
-            <div class="top">
-              <h3>Recette d’un site e‑commerce</h3>
-              <span class="tag">Recette</span>
-            </div>
-            <p>
-              <strong>Contexte :</strong> panier, paiement, compte client, emails transactionnels.
-              <br /><strong>Rôle :</strong> plan de test, cas de test, validation avant mise en production.
-              <br /><strong>Outils :</strong> checklists, documentation, suivi de corrections.
-              <br /><strong>Résultat :</strong> validation structurée + retours clairs pour l’équipe.
-            </p>
-            <div class="meta">
-              <span class="chip">Smoke tests</span>
-              <span class="chip">Régression</span>
-              <span class="chip">Checklists</span>
-            </div>
-          </article>
-
-          <article class="item" role="listitem">
-            <div class="top">
-              <h3>Début d’automatisation E2E (Playwright)</h3>
-              <span class="tag">Automatisation</span>
-            </div>
-            <p>
-              <strong>Contexte :</strong> automatiser quelques parcours stables (login, navigation, formulaire).
-              <br /><strong>Rôle :</strong> écrire des tests lisibles, réduire les faux positifs.
-              <br /><strong>Outils :</strong> Playwright (TypeScript), Git.
-              <br /><strong>Résultat :</strong> base de suite E2E maintenable pour itérer.
-              <!-- TODO: Ajoute un lien GitHub si tu en as un -->
-              <br /><strong>[INSÈRE TON LIEN REPO ICI - optionnel]</strong>
-            </p>
-            <div class="meta">
-              <span class="chip">E2E</span>
-              <span class="chip">Fiabilité</span>
-              <span class="chip">Maintenance</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO / EXEMPLES DE TEST -->
-    <section id="portfolio" class="card reveal" aria-labelledby="portfolio-title">
-      <div class="section-head">
-        <h2 id="portfolio-title">Exemples de cas de test</h2>
-        <p>Format simple, lisible, directement dans la page</p>
-      </div>
-      <div class="section-body">
-        <!-- TODO: Remplace/complète les exemples ci-dessous avec tes vrais cas -->
-        <div class="table-wrap" role="region" aria-label="Tableau d'exemples de cas de test">
-          <table>
-            <thead>
-              <tr>
-                <th>Cas de test</th>
-                <th>Scénario</th>
-                <th>Résultat attendu</th>
-                <th>Résultat obtenu</th>
-                <th>Statut</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Connexion — identifiants valides</strong></td>
-                <td>
-                  Étant sur la page de connexion, saisir un email + mot de passe valides,
-                  puis valider.
-                </td>
-                <td>
-                  L’utilisateur est authentifié et redirigé vers la page d’accueil.
-                  Un état connecté est visible (ex. bouton “Déconnexion”).
-                </td>
-                <td>
-                  [À REMPLACER : “Conforme” / description si écart]
-                </td>
-                <td>
-                  [À REMPLACER : PASS / FAIL / BLOCKED]
-                </td>
-              </tr>
-
-              <tr>
-                <td><strong>Formulaire — email invalide</strong></td>
-                <td>
-                  Remplir le formulaire de contact avec un email invalide (ex. “test@”),
-                  puis tenter d’envoyer.
-                </td>
-                <td>
-                  Affichage d’un message d’erreur clair. Envoi bloqué.
-                  Aucune donnée n’est transmise.
-                </td>
-                <td>
-                  [À REMPLACER]
-                </td>
-                <td>
-                  [À REMPLACER]
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="help" style="margin-top:10px;">
-          Astuce : tu peux copier cette section et ajouter autant de lignes que nécessaire.
-          Garde des formulations factuelles (observé vs attendu).
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card reveal" aria-labelledby="contact-title">
-      <div class="section-head">
-        <h2 id="contact-title">Contact</h2>
-        <p>Pour échanger sur une mission QA (freelance ou CDI)</p>
-      </div>
-
-      <div class="section-body">
-        <div class="contact">
-          <div class="box" aria-label="Coordonnées">
-            <dl>
-              <dt>Email</dt>
-              <dd>
-                <!-- TODO: Remplace par ton email -->
-                <a href="mailto:[INSÈRE TON EMAIL ICI]">[INSÈRE TON EMAIL ICI]</a>
-              </dd>
-
-              <dt>LinkedIn</dt>
-              <dd>
-                <!-- TODO: Remplace par ton lien -->
-                <a href="[INSÈRE TON URL LINKEDIN ICI]" target="_blank" rel="noopener noreferrer">
-                  [INSÈRE TON URL LINKEDIN ICI]
-                </a>
-              </dd>
-
-              <dt>Lieu</dt>
-              <dd>Vitré, France</dd>
-
-              <dt>Disponibilité</dt>
-              <dd>
-                <!-- TODO: Ajuste (ex. “immédiate”, “à partir de …”, “alternance”, etc.) -->
-                [INSÈRE TA DISPONIBILITÉ ICI]
-              </dd>
-            </dl>
-
-            <p class="help" style="margin-top:12px;">
-              Note : ce site est en HTML simple. Le formulaire ci‑dessous utilise un <code>mailto:</code>
-              (pas d’envoi serveur). Si tu veux un vrai envoi, il faudra brancher un backend ou un service.
-            </p>
-          </div>
-
-          <div class="box" aria-label="Formulaire de contact">
-            <!--
-              FORMULAIRE :
-              - Sans backend, on génère un mail via mailto.
-              - Tu peux remplacer par un vrai endpoint plus tard.
-            -->
-            <form id="contactForm">
-              <div class="field">
-                <label for="name">Nom</label>
-                <input id="name" name="name" type="text" autocomplete="name" placeholder="[Ton nom]" required />
+        <div class="projects-list" role="list">
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual">
+                <img src="Groupement%20dachat.png" alt="Groupement d'achat" loading="lazy" decoding="async" />
               </div>
-
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="nom@domaine.fr" required />
+              <div>
+                <div class="project-title">
+                  <h3><a href="https://groupement-achat-jans.fr/" target="_blank" rel="noopener noreferrer">Groupement d’achat Janzé — Démarche de test</a></h3>
+                  <span class="tag">Bénévolat</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
               </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> préparation et structuration d’une démarche de test sur un site “groupement d’achat” (organisation type Confluence).
+              </p>
 
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="[Écris ton message ici]" required></textarea>
+              <p style="margin-top:10px;">
+                <strong>Plan de test :</strong>
+                <br />- objectifs, portée et stratégie de test
+                <br />- planification, risques & contingences, approbations
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Périmètre (exemples) :</strong>
+                <br />- utilisateur & authentification
+                <br />- commandes & paiement
+                <br />- produit / catalogue
+                <br />- sécurité
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Objectifs de test :</strong>
+                <br />- assurer la conformité aux exigences fonctionnelles et à la norme RGAA
+                <br />- valider les fonctionnalités clés et identifier les défauts
+                <br />- vérifier l’utilisation sur smartphone
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Exclusions :</strong>
+                <br />- tests de performance et de charge
+                <br />- tests d’API
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Stratégie de test (backend) :</strong>
+                <br />- tests fonctionnels (boîte noire : partition d’équivalence, valeurs limites)
+                <br />- tests exploratoires
+                <br />- niveaux : tests système, tests d’accessibilité
+                <br />- approche : combinaison de tests manuels et automatisés
+                <br />- critères d’entrée/sortie (environnement prêt, critères de fin satisfaits)
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Conception & suivi :</strong>
+                <br />- référentiel des risques (modèle + déclinaison projet)
+                <br />- scénarios de test, jeux de données
+                <br />- template de rapport d’anomalie, codification et suivi dans Squash
+                <br />- rapport d’anomalies accessibilité (WCAG 2.2 / RGAA)
+                <br />- compléments : schéma technique (draw.io – backend), espace GitHub, piste d’automatisation
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Ressource :</strong> <strong>[INSÈRE TON LIEN (Confluence/GitHub/Drive) ICI]</strong> — <a href="https://groupement-achat-jans.fr/" target="_blank" rel="noopener noreferrer">https://groupement-achat-jans.fr/</a>
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Plan de test</span>
+                <span class="chip">Scénarios</span>
+                <span class="chip">Jeux de données</span>
+                <span class="chip">Squash</span>
+                <span class="chip">Rapport d’anomalie</span>
+                <span class="chip">Référentiel des risques</span>
+                <span class="chip">Accessibilité</span>
+                <span class="chip">WCAG 2.2</span>
+                <span class="chip">RGAA</span>
               </div>
+            </div>
+          </details>
 
-              <button class="btn btn-primary" type="submit">Envoyer</button>
-              <p class="help" id="formHelp" aria-live="polite"></p>
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual">
+                <img src="Orange.png" alt="Orange" loading="lazy" decoding="async" />
+              </div>
+              <div>
+                <div class="project-title">
+                  <h3>Initiation à l’automatisation (Playwright, Selenium)</h3>
+                  <span class="tag">Automatisation</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> premiers pas en automatisation pour fiabiliser certains parcours.
+                <br /><strong>Rôle :</strong> comprendre la structure des tests, écrire des scripts simples et maintenir la lisibilité.
+                <br /><strong>Outils :</strong> Playwright, Selenium, Python.
+                <br /><strong>Ressource :</strong> <strong>[INSÈRE TON LIEN REPO ICI - optionnel]</strong>
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">E2E</span>
+                <span class="chip">Fiabilité</span>
+                <span class="chip">Maintenance</span>
+              </div>
+            </div>
+          </details>
 
-              <!-- TODO: Mets ton email réel ici (utilisé par le JS mailto) -->
-              <input type="hidden" id="toEmail" value="[INSÈRE TON EMAIL ICI]" />
-            </form>
-          </div>
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual">
+                <img src="photo%20istqb.jpg" alt="Projet ISTQBingBang" loading="lazy" decoding="async" />
+              </div>
+              <div>
+                <div class="project-title">
+                  <h3>ISTQBingBang</h3>
+                  <span class="tag">ISTQB</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> projet réalisé en binôme (2 personnes) pour préparer l’ISTQB et apprendre à travailler en mode <strong>Agile</strong>.
+                <br /><strong>Livrable principal :</strong> un <strong>jeu de cartes multijoueur</strong> sur le thème ISTQB.
+                <br /><strong>But du jeu :</strong> être le joueur ayant <strong>le moins de bugs</strong> et <strong>le plus de cartes</strong> en répondant correctement aux questions.
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Règles (résumé) :</strong>
+                <br />- lancer un dé pour déterminer la catégorie de question
+                <br />- piocher une carte dans le paquet correspondant
+                <br />- si bonne réponse : la carte est gagnée
+                <br />- si mauvaise réponse : une carte bug est récupérée
+                <br />- à partir de 2 à 3 bugs : état “critique” (utilisation d’un joker)
+                <br />- défi possible entre joueurs (non‑régression / débug / revue)
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Catégories ISTQB utilisées :</strong>
+                <br />- fondamentaux des tests
+                <br />- tester tout au long du cycle de vie du développement logiciel
+                <br />- test statique
+                <br />- analyse et conception des tests
+                <br />- gestion des activités de test
+                <br />- outils de test
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Apprentissages Agile (mise en pratique) :</strong>
+                <br />- transformation d’un backlog en User Stories
+                <br />- gestion de sprint, itérations et adaptation après une mauvaise interprétation du besoin
+                <br />- <em>Definition of Done</em> (DoD) / <em>Definition of Ready</em> (DoR)
+                <br />- burndown chart (suivi du reste à faire)
+                <br />- feedback, rétrospective, test d’acceptation
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">ISTQB</span>
+                <span class="chip">Fondamentaux QA</span>
+                <span class="chip">Agile</span>
+                <span class="chip">Travail en binôme</span>
+              </div>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -1005,10 +948,10 @@
     <footer aria-label="Pied de page">
       <div class="footer-inner">
         <div>
-          Testeur de logiciels rigoureux et curieux, prêt à apprendre et à contribuer à la qualité des produits numériques.
+          Testeuse logiciels rigoureuse et curieuse, prête à apprendre et à contribuer à la qualité des produits numériques.
         </div>
         <div>
-          <span id="year">© 2026</span> — [Ton prénom et nom]
+          © <span id="year">2026</span> — Laëtitia Domenger
         </div>
       </div>
     </footer>
@@ -1018,7 +961,7 @@
     (function () {
       // Année automatique
       var yearEl = document.getElementById("year");
-      if (yearEl) yearEl.textContent = "© " + new Date().getFullYear();
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
       // Menu mobile
       var header = document.querySelector("header");
@@ -1065,38 +1008,6 @@
         items.forEach(function (el) { el.classList.add("is-visible"); });
       }
 
-      // Formulaire: mailto (sans backend)
-      var form = document.getElementById("contactForm");
-      var help = document.getElementById("formHelp");
-
-      function safe(v) { return (v || "").toString().trim(); }
-
-      if (form) {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          var name = safe(document.getElementById("name") && document.getElementById("name").value);
-          var email = safe(document.getElementById("email") && document.getElementById("email").value);
-          var message = safe(document.getElementById("message") && document.getElementById("message").value);
-          var toEmail = safe(document.getElementById("toEmail") && document.getElementById("toEmail").value);
-
-          if (!toEmail || toEmail.indexOf("[") === 0) {
-            if (help) help.textContent = "À configurer : remplace [INSÈRE TON EMAIL ICI] avant d’utiliser l’envoi.";
-            return;
-          }
-
-          var subject = encodeURIComponent("Contact portfolio QA — " + (name || "Sans nom"));
-          var body = encodeURIComponent(
-            "Nom : " + (name || "-") + "\n" +
-            "Email : " + (email || "-") + "\n\n" +
-            "Message :\n" + (message || "-") + "\n"
-          );
-
-          window.location.href = "mailto:" + encodeURIComponent(toEmail) + "?subject=" + subject + "&body=" + body;
-
-          if (help) help.textContent = "Ton client email va s’ouvrir pour envoyer le message.";
-        });
-      }
     })();
   </script>
 </body>
