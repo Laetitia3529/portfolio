@@ -34,7 +34,7 @@
       --bg: #f7f9fc;
       --surface: #ffffff;
       --text: #0f172a;         /* slate-900 */
-      --muted: #475569;        /* slate-600 */
+      --muted: #334155;        /* slate-700 */
       --line: #e2e8f0;         /* slate-200 */
       --primary: #0b4ea2;      /* bleu sobre */
       --primary-2: #0f766e;    /* vert mouton (accent secondaire) */
@@ -87,7 +87,7 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(247, 249, 252, 0.75);
+      background: rgba(247, 249, 252, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(226, 232, 240, 0.75);
     }
@@ -283,11 +283,12 @@
     }
     .btn:hover{ transform: translateY(-1px); }
     .btn-primary{
-      background: linear-gradient(135deg, rgba(11,78,162,0.95), rgba(11,78,162,0.82));
+      background: #0b4ea2;
       color: #fff;
       box-shadow: 0 10px 24px rgba(11,78,162,0.20);
     }
     .btn-primary:hover{
+      background: #083d82;
       box-shadow: 0 12px 28px rgba(11,78,162,0.26);
     }
     .btn-ghost{
@@ -653,114 +654,6 @@
       </div>
     </section>
 
-    <section id="engagements" class="card reveal" aria-labelledby="engagements-title">
-      <div class="section-head">
-        <h2 id="engagements-title">Mes engagements</h2>
-        <p>Quelques engagements et activités qui me tiennent à cœur</p>
-      </div>
-      <div class="section-body">
-        <div class="projects-list" role="list">
-          <details class="project" role="listitem">
-            <summary>
-              <div class="project-visual" aria-hidden="true">CER</div>
-              <div>
-                <div class="project-title">
-                  <h3>CER (Comité d'Éthique de Recherche) — Processus d’évaluation des dossiers</h3>
-                  <span class="tag">Engagement</span>
-                </div>
-                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
-              </div>
-            </summary>
-            <div class="project-body">
-              <p>
-                <strong>Notre mission :</strong>
-                <br />- valider les projets (mémoires, publications, recherches) nécessitant un avis éthique, obligatoire pour toute étude impliquant des participants humains
-                <br />- garantir une évaluation équilibrée : chaque dossier est examiné par un binôme professionnel/partie civile, combinant expertise médicale et regard expérientiel
-                <br />- assurer le respect strict des règles éthiques et légales (RGPD, consentement éclairé, anonymisation des données, stockage sécurisé)
-              </p>
-
-              <p style="margin-top:10px;">
-                <strong>Fonctionnement :</strong>
-                <br />- chaque dossier est évalué par deux rapporteurs selon les critères définis dans la grille de lecture IRB/CER (un troisième rapporteur peut être sollicité selon les besoins)
-                <br />- les rapporteurs sont désignés par la présidente Dr Aurélie Bourmaud en fonction de leur champ de compétence et du sujet déposé
-                <br />- délai de 15 jours pour rendre les évaluations
-              </p>
-
-              <p style="margin-top:10px;">
-                <strong>Décisions possibles :</strong>
-                <br />- avis favorable
-                <br />- sous réserve de modification
-                <br />- avis défavorable
-              </p>
-
-              <p style="margin-top:10px;">
-                <strong>Communication :</strong>
-                <br />- les remarques des rapporteurs sont transmises à l’autre rapporteur et à la présidente
-                <br />- les avis compilés sont communiqués à l’investigateur
-              </p>
-
-              <p style="margin-top:10px;">
-                <strong>En cas de litige :</strong>
-                <br />- un CER complet exceptionnel peut être convoqué par la présidente (réunion à distance)
-              </p>
-
-              <p style="margin-top:10px;">
-                <strong>Information des membres :</strong>
-                <br />- tous les membres du CER sont informés des projets, des rapporteurs désignés et de l’avis final pour chaque projet
-              </p>
-
-              <div class="meta" aria-label="Mots-clés">
-                <span class="chip">Évaluation</span>
-                <span class="chip">IRB / CER</span>
-                <span class="chip">Délai</span>
-                <span class="chip">Décision</span>
-              </div>
-            </div>
-          </details>
-
-          <details class="project" role="listitem">
-            <summary>
-              <div class="project-visual" aria-hidden="true">Engagement</div>
-              <div>
-                <div class="project-title">
-                  <h3>[Titre engagement #2]</h3>
-                  <span class="tag">Engagement</span>
-                </div>
-                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
-              </div>
-            </summary>
-            <div class="project-body">
-              <p>
-                <strong>Contexte :</strong> [à compléter]
-                <br /><strong>Rôle :</strong> [à compléter]
-                <br /><strong>Ce que ça m’apporte :</strong> [à compléter]
-              </p>
-            </div>
-          </details>
-
-          <details class="project" role="listitem">
-            <summary>
-              <div class="project-visual" aria-hidden="true">Engagement</div>
-              <div>
-                <div class="project-title">
-                  <h3>[Titre engagement #3]</h3>
-                  <span class="tag">Engagement</span>
-                </div>
-                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
-              </div>
-            </summary>
-            <div class="project-body">
-              <p>
-                <strong>Contexte :</strong> [à compléter]
-                <br /><strong>Rôle :</strong> [à compléter]
-                <br /><strong>Ce que ça m’apporte :</strong> [à compléter]
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
     <!-- PROJETS -->
     <section id="projets" class="card reveal" aria-labelledby="projects-title">
       <div class="section-head">
@@ -895,6 +788,7 @@
                 <br />- veiller à l’accessibilité numérique et appliquer la réglementation <strong>RGAA</strong> (106 critères) pour rendre le portail accessible
                 <br />- mettre en place une structure de tests pérenne pour une démarche d’amélioration continue (fonctionnels, accessibilité, et une part d’automatisation)
               </p>
+              
 
               <p style="margin-top:10px;">
                 <strong>Fonctionnalité principale :</strong>
@@ -1050,6 +944,132 @@
               </div>
             </div>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="engagements" class="card reveal" aria-labelledby="engagements-title">
+      <div class="section-head">
+        <h2 id="engagements-title">Mes engagements</h2>
+        <p>Quelques engagements et activités qui me tiennent à cœur</p>
+      </div>
+      <div class="section-body">
+        <div class="projects-list" role="list">
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true">CER</div>
+              <div>
+                <div class="project-title">
+                  <h3>CER (Comité d'Éthique de Recherche) — Processus d’évaluation des dossiers</h3>
+                  <span class="tag">Engagement</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Notre mission :</strong>
+                <br />- valider les projets (mémoires, publications, recherches) nécessitant un avis éthique, obligatoire pour toute étude impliquant des participants humains
+                <br />- garantir une évaluation équilibrée : chaque dossier est examiné par un binôme professionnel/partie civile, combinant expertise médicale et regard expérientiel
+                <br />- assurer le respect strict des règles éthiques et légales (RGPD, consentement éclairé, anonymisation des données, stockage sécurisé)
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Fonctionnement :</strong>
+                <br />- chaque dossier est évalué par deux rapporteurs selon les critères définis dans la grille de lecture IRB/CER (un troisième rapporteur peut être sollicité selon les besoins)
+                <br />- les rapporteurs sont désignés par la présidente Dr Aurélie Bourmaud en fonction de leur champ de compétence et du sujet déposé
+                <br />- délai de 15 jours pour rendre les évaluations
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Décisions possibles :</strong>
+                <br />- avis favorable
+                <br />- sous réserve de modification
+                <br />- avis défavorable
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Communication :</strong>
+                <br />- les remarques des rapporteurs sont transmises à l’autre rapporteur et à la présidente
+                <br />- les avis compilés sont communiqués à l’investigateur
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>En cas de litige :</strong>
+                <br />- un CER complet exceptionnel peut être convoqué par la présidente (réunion à distance)
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Information des membres :</strong>
+                <br />- tous les membres du CER sont informés des projets, des rapporteurs désignés et de l’avis final pour chaque projet
+              </p>
+
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Évaluation</span>
+                <span class="chip">IRB / CER</span>
+                <span class="chip">Délai</span>
+                <span class="chip">Décision</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true">LADAPT</div>
+              <div>
+                <div class="project-title">
+                  <h3>Réseau des Bénévoles LADAPT — Ille-et-Vilaine</h3>
+                  <span class="tag">Engagement</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Présentation :</strong>
+                <br />Le réseau des bénévoles de LADAPT soutient les personnes en situation de handicap et leurs familles depuis plus de 25 ans.
+                <br />Créé en 2000, il compte <strong>211 bénévoles</strong> engagés et dispose de <strong>7 référents régionaux</strong>.
+                <br />Ses actions visent la réussite professionnelle et sociale via parrainage, sensibilisation, activités culturelles et loisirs.
+                <br />Sur 3 ans, le réseau a sensibilisé <strong>13 595</strong> enfants au handicap.
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Actions en Ille-et-Vilaine :</strong>
+                <br />- création d’un comité départemental en 2001, soutenu par la <strong>DREETS 35</strong> pour 2025
+                <br />- soutien à l’insertion professionnelle : parrainages, accompagnements personnalisés, entretiens-conseils
+                <br />- participation à des événements : <strong>SEEPH</strong>, Forum emploi, Job Dating, Handicafé
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Objectifs & fonctionnement :</strong>
+                <br />- offrir un accompagnement complémentaire à l’insertion, basé sur l’expérience et la disponibilité bénévole
+                <br />- favoriser la confiance, l’autonomie, le lien social, et la réinsertion dans l’entreprise
+                <br />- instaurer une relation de proximité pour aider à résoudre les difficultés et briser l’isolement
+                <br />- travailler en réseau pour optimiser le suivi, partager l’expérience et favoriser l’ouverture au monde professionnel
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Les bénévoles & les parrainés :</strong>
+                <br />- <strong>28 bénévoles actifs</strong>, majoritairement retraités, hommes et femmes de divers horizons
+                <br />- compétences : handicap, loi du 11 février 2005, acteurs institutionnels, techniques de recherche d’emploi
+                <br />- parrainés : personnes en recherche d’emploi, en difficulté ou en perte de confiance (forums, partenaires, site national)
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Grâce au réseau :</strong>
+                <br />- j’ai pu me former aux <strong>Premiers Secours en Santé Mentale (PSSM)</strong>, pour mieux accompagner et orienter les personnes en situation de fragilité
+              </p>
+
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Bénévolat</span>
+                <span class="chip">Handicap</span>
+                <span class="chip">Insertion professionnelle</span>
+                <span class="chip">Parrainage</span>
+                <span class="chip">Sensibilisation</span>
+              </div>
+            </div>
+          </details>
+
         </div>
       </div>
     </section>
