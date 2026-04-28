@@ -212,6 +212,25 @@
       overflow: hidden;
     }
 
+    #profil{
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    #profil::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(11,78,162,0.10), transparent 45%),
+        linear-gradient(300deg, rgba(15,118,110,0.10), transparent 55%);
+      z-index: 0;
+    }
+    #profil > *{
+      position: relative;
+      z-index: 1;
+    }
+
     .section-head{
       padding: 22px 22px 10px;
       display: flex;
@@ -251,10 +270,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(120deg, rgba(11,78,162,0.10), transparent 45%),
-        linear-gradient(300deg, rgba(15,118,110,0.10), transparent 55%);
-      z-index: -1;
+      display: none;
     }
 
     .hero h1{
@@ -456,20 +472,33 @@
       font-size: 1rem;
       letter-spacing: -0.02em;
     }
-    .project-title h3 a{
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
 
     .project-hint{
       color: var(--muted);
       font-size: 0.9rem;
       font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     .project[open] .project-hint{ color: rgba(11, 78, 162, 0.95); }
     .project .when-open{ display: none; }
     .project[open] .when-open{ display: inline; }
     .project[open] .when-closed{ display: none; }
+
+    .visit-link{
+      color: rgba(11, 78, 162, 0.95);
+      font-weight: 700;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      line-height: 1;
+    }
+    .visit-link:hover{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
     .project-body{ padding: 0 14px 14px; }
     .project-body p{
@@ -614,7 +643,7 @@
 
   <main id="contenu" class="container" tabindex="-1">
     <!-- HERO -->
-    <section id="profil" class="card reveal" aria-labelledby="hero-title">
+    <section id="profil" class="card reveal" aria-labelledby="hero-title" style="padding:22px;">
       <div class="hero">
         <div>
           <h1 id="hero-title">Testeuse logiciels / QA</h1>
@@ -688,6 +717,31 @@
 
           <details class="mini">
             <summary>
+              <h3>Parlons de ma RQTH</h3>
+              <span class="mini-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></span>
+              <p class="mini-teaser">Un handicap léger et invisible, avec des besoins simples pour travailler au mieux.</p>
+            </summary>
+            <div class="mini-body">
+              <p>
+                Alors, je vais être franche : mon handicap, il est léger, invisible, mais il est là. Des douleurs chroniques. Pas quelque chose qui se voit, mais qui peut me compliquer la vie si je ne fais pas attention.
+                <br /><br />Je vous rassure, j’ai appris à vivre avec, à m’adapter. Et surtout, j’ai appris une chose : quand on a été un peu ballotté par la vie, on devient costaud, résistant. Et surtout, on cherche des solutions, pas des problèmes.
+                <br /><br />
+                </p>
+
+              <p style="margin-top:10px;">
+                <strong>Mes besoins pour travailler au mieux :</strong>
+                <br />- une chaise sans accoudoirs (ils me font plus de mal que de bien)
+                <br />- un repose-bras à part, pour soulager mes épaules
+                <br />- une Souris centrée RollerMouse
+                <br />- un repose-pieds
+                <br />- deux écrans, pour éviter de tourner la tête dans tous les sens
+                <br /><br />Voilà, rien d’exceptionnel. Juste de quoi me permettre de me concentrer sur l’essentiel : mon travail, et ce que je peux apporter à votre équipe.
+              </p>
+            </div>
+          </details>
+
+          <details class="mini">
+            <summary>
               <h3>Actuellement</h3>
               <span class="mini-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></span>
               <p class="mini-teaser">Je continue à me former (dont anglais) et à développer mon profil sur le terrain.</p>
@@ -722,10 +776,13 @@
               </div>
               <div>
                 <div class="project-title">
-                  <h3><a href="https://groupement-achat-jans.fr/" target="_blank" rel="noopener noreferrer">Groupement d’achat Janzé — Démarche de test</a></h3>
+                  <h3>Groupement d’achat Janzé — Démarche de test</h3>
                   <span class="tag">Bénévolat</span>
                 </div>
-                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+                <div class="project-hint">
+                  <span class="when-closed">Voir plus</span><span class="when-open">Réduire</span>
+                  <a class="visit-link" href="https://groupement-achat-jans.fr/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Visiter le site</a>
+                </div>
               </div>
             </summary>
             <div class="project-body">
@@ -799,7 +856,7 @@
               </p>
 
               <p style="margin-top:10px;">
-                <strong>Ressource :</strong> <strong>[INSÈRE TON LIEN (Confluence/GitHub/Drive) ICI]</strong> — <a href="https://groupement-achat-jans.fr/" target="_blank" rel="noopener noreferrer">https://groupement-achat-jans.fr/</a>
+                <strong>Ressource :</strong> <a href="https://groupement-achat-jans.fr/" target="_blank" rel="noopener noreferrer">https://groupement-achat-jans.fr/</a>
               </p>
               <div class="meta" aria-label="Mots-clés">
                 <span class="chip">Plan de test</span>
@@ -872,7 +929,7 @@
               </div>
 
               <p style="margin-top:10px;">
-                <strong>Ressource :</strong> <strong>[INSÈRE TON LIEN (PPT / Drive / Notion / Confluence) ICI]</strong>
+                <strong>Ressource :</strong>
               </p>
 
               <div class="meta" aria-label="Mots-clés">
