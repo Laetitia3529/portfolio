@@ -824,8 +824,10 @@
                 <br />— T6 · Attributs ARIA (accessibilité)
                 <br />— T7 · Présence des <code>alt</code> sur toutes les images (WCAG 2.2)
                 <br /><br /><strong>Tests de sécurité :</strong>
-                <br />— TS1 · Liens <code>target="_blank"</code> avec <code>rel="noopener noreferrer"</code> (protection reverse tabnapping)
-                <br />— TS2 · Absence de liens <code>href="javascript:"</code> (injection de code)
+                <br />— TS1 · Liens <code>target="_blank"</code> avec <code>rel="noopener noreferrer"</code>
+                <br /><span style="font-size:0.85rem; color:var(--muted);">Tout lien qui ouvre un nouvel onglet peut, sans protection, permettre à la page externe de modifier l'onglet d'origine (attaque <em>reverse tabnapping</em>). Ce test vérifie que chaque lien externe possède le verrou <code>rel="noopener noreferrer"</code>. Résultat : 2 liens externes détectés, tous sécurisés.</span>
+                <br /><br />— TS2 · Absence de liens <code>href="javascript:"</code>
+                <br /><span style="font-size:0.85rem; color:var(--muted);">Un lien dont le href commence par <code>javascript:</code> exécute du code directement au clic, sans navigation. C'est une porte d'entrée classique pour injecter du code malveillant. Ce test parcourt les 15 liens de la page et vérifie qu'aucun n'utilise ce protocole.</span>
               </p>
 
               <p style="margin-top:12px;">
