@@ -462,15 +462,19 @@
 
     .project-title{
       display: flex;
-      align-items: baseline;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 10px;
-      flex-wrap: wrap;
     }
     .project-title h3{
       margin: 0;
       font-size: 1rem;
       letter-spacing: -0.02em;
+      min-width: 0;
+    }
+    .project-title .tag{
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .project-hint{
@@ -769,6 +773,111 @@
       </div>
       <div class="section-body">
         <div class="projects-list" role="list">
+
+          <!-- ── Card Tests automatisés Playwright ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true" style="font-size:0.85rem; font-weight:700; letter-spacing:0.03em;">E2E</div>
+              <div>
+                <div class="project-title">
+                  <h3>Tests automatisés Playwright — Portfolio</h3>
+                  <span class="tag">Automatisation</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p style="font-size:0.85rem; color:var(--muted); background:rgba(15,118,110,0.06); border:1px solid rgba(15,118,110,0.2); border-radius:8px; padding:10px 12px;">
+                ✦ <em>Ce projet a été réalisé en collaboration avec une IA (Windsurf / Cascade). N'étant pas développeuse, j'ai piloté l'ensemble par mes prompts : choix des tests, correction des erreurs, compréhension des concepts. Le code est le résultat d'un vrai travail d'analyse et d'itération.</em>
+              </p>
+
+              <p style="margin-top:12px;">
+                <strong>Objectif :</strong> concevoir et exécuter une suite de tests automatisés end-to-end sur ce portfolio, pour démontrer une démarche QA complète appliquée à un projet réel.
+              </p>
+
+              <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; text-align:center;">
+                <div style="background:rgba(11,78,162,0.06); border:1px solid rgba(11,78,162,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0b4ea2;">28</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">tests passés</div>
+                </div>
+                <div style="background:rgba(15,118,110,0.06); border:1px solid rgba(15,118,110,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0f766e;">0</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">échoués</div>
+                </div>
+                <div style="background:rgba(11,78,162,0.06); border:1px solid rgba(11,78,162,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0b4ea2;">4</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">navigateurs</div>
+                </div>
+                <div style="background:rgba(15,118,110,0.06); border:1px solid rgba(15,118,110,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0f766e;">100%</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">réussite</div>
+                </div>
+              </div>
+
+              <p style="margin-top:14px;">
+                <strong>Tests couverts :</strong>
+                <br />— T1 · Chargement de la page et titre
+                <br />— T2 · Navigation par ancres (desktop &amp; mobile)
+                <br />— T3 · Menu burger responsive (375 px)
+                <br />— T4 · Liens contact — <code>mailto:</code> et <code>tel:</code>
+                <br />— T5 · Interactivité des cards <code>details/summary</code>
+                <br />— T6 · Attributs ARIA (accessibilité)
+                <br />— T7 · Présence des <code>alt</code> sur toutes les images (WCAG 2.2)
+              </p>
+
+              <p style="margin-top:12px;">
+                <strong>Navigateurs testés :</strong> Chromium · Firefox · WebKit · Mobile Chrome (Pixel 5)
+              </p>
+
+              <p style="margin-top:12px;">
+                <strong>Rapport Playwright :</strong>
+              </p>
+              <div class="screens" aria-label="Capture du rapport Playwright" style="margin-top:6px;">
+                <img src="rapport-playwright.png" alt="Rapport Playwright — 28 tests passés, 0 échoués, 4 navigateurs" loading="lazy" decoding="async" />
+              </div>
+
+              <p style="margin-top:14px;"><strong>Difficultés rencontrées &amp; solutions :</strong></p>
+              <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
+
+                <div style="border-left:3px solid rgba(11,78,162,0.4); padding:8px 12px; background:rgba(11,78,162,0.04); border-radius:0 8px 8px 0;">
+                  <strong style="font-size:0.9rem;">Apostrophe typographique</strong>
+                  <br /><span style="font-size:0.85rem; color:var(--muted);">Le filtre <code>hasText("Groupement d'achat")</code> échouait silencieusement : le HTML contient <code>'</code> (apostrophe courbe Unicode) et non <code>'</code> (ASCII). <strong>Solution :</strong> remplacer par une regex <code>/Groupement.*Janz/</code>.</span>
+                </div>
+
+                <div style="border-left:3px solid rgba(11,78,162,0.4); padding:8px 12px; background:rgba(11,78,162,0.04); border-radius:0 8px 8px 0;">
+                  <strong style="font-size:0.9rem;">Menu burger fermé sur mobile</strong>
+                  <br /><span style="font-size:0.85rem; color:var(--muted);">Les liens de navigation sont masqués sur mobile tant que le burger n'est pas ouvert. Le test échouait sur mobile-chrome avec un timeout. <strong>Solution :</strong> détecter le viewport et rouvrir le burger avant chaque clic de navigation.</span>
+                </div>
+
+                <div style="border-left:3px solid rgba(11,78,162,0.4); padding:8px 12px; background:rgba(11,78,162,0.04); border-radius:0 8px 8px 0;">
+                  <strong style="font-size:0.9rem;"><code>getByRole('listitem')</code> inconsistant cross-browser</strong>
+                  <br /><span style="font-size:0.85rem; color:var(--muted);">Firefox ne trouvait pas les éléments <code>&lt;details role="listitem"&gt;</code> via l'arbre ARIA. <strong>Solution :</strong> remplacer par <code>locator('details.project')</code> qui cible le DOM directement.</span>
+                </div>
+
+                <div style="border-left:3px solid rgba(11,78,162,0.4); padding:8px 12px; background:rgba(11,78,162,0.04); border-radius:0 8px 8px 0;">
+                  <strong style="font-size:0.9rem;">Élément hors viewport non détecté</strong>
+                  <br /><span style="font-size:0.85rem; color:var(--muted);"><code>getByText('Plan de test')</code> échouait : les chips étaient dans le DOM mais en dehors du viewport. <strong>Solution :</strong> vérifier l'attribut <code>open</code> sur <code>&lt;details&gt;</code> et la visibilité du <code>.project-body</code>.</span>
+                </div>
+
+                <div style="border-left:3px solid rgba(11,78,162,0.4); padding:8px 12px; background:rgba(11,78,162,0.04); border-radius:0 8px 8px 0;">
+                  <strong style="font-size:0.9rem;">Bouton burger invisible sur desktop</strong>
+                  <br /><span style="font-size:0.85rem; color:var(--muted);"><code>getByRole('button')</code> ignore les éléments <code>display:none</code> — le burger n'existe pas pour l'arbre ARIA sur desktop. <strong>Solution :</strong> utiliser <code>locator('#menuBtn')</code> pour cibler l'ID directement.</span>
+                </div>
+
+              </div>
+
+              <div class="meta" aria-label="Mots-clés" style="margin-top:12px;">
+                <span class="chip">Playwright</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">End-to-end</span>
+                <span class="chip">Cross-browser</span>
+                <span class="chip">WCAG 2.2</span>
+                <span class="chip">ARIA</span>
+                <span class="chip">Responsive</span>
+              </div>
+            </div>
+          </details>
+
           <details class="project" role="listitem">
             <summary>
               <div class="project-visual">
@@ -1070,7 +1179,7 @@
               <div class="project-visual" aria-hidden="true">CER</div>
               <div>
                 <div class="project-title">
-                  <h3>CER (Comité d'Éthique de Recherche) — Processus d’évaluation des dossiers</h3>
+                  <h3>CER (Comité d'Éthique de Recherche)<br /><span style="font-weight:400; font-size:0.9rem;">Processus d'évaluation des dossiers</span></h3>
                   <span class="tag">Engagement</span>
                 </div>
                 <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
@@ -1279,6 +1388,9 @@
       <div class="footer-inner">
         <div>
           Testeuse logiciels rigoureuse et curieuse, prête à apprendre et à contribuer à la qualité des produits numériques.
+        </div>
+        <div style="font-size:0.8rem; opacity:0.7; margin-top:6px;">
+          ✦ Ce portfolio a été conçu et structuré par mes soins, en utilisant l'IA comme outil de développement. La rédaction des prompts, les choix de contenu, d'accessibilité et de design sont entièrement les miens.
         </div>
         <div>
           © <span id="year">2026</span> — Laëtitia Domenger

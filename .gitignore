@@ -1,0 +1,14 @@
+# Tests Playwright
+tests/
+playwright.config.ts
+playwright-report/
+test-results/
+tsconfig.json
+
+# Dépendances Node.js
+node_modules/
+package.json
+package-lock.json
+
+# Documentation tests
+README-playwright.md
