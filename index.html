@@ -30,6 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
+    /* === Variables CSS : thème, couleurs, ombres, rayons, largeur max === */
     :root{
       --bg: #f7f9fc;
       --surface: #ffffff;
@@ -44,6 +45,7 @@
       --max: 1100px;
     }
 
+    /* === Reset & styles de base === */
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body{
@@ -83,6 +85,7 @@
       margin: 0 auto;
     }
 
+    /* === Header : sticky, fond semi-transparent, flou d'arrière-plan === */
     header{
       position: sticky;
       top: 0;
@@ -197,6 +200,7 @@
       border-radius: 999px;
     }
 
+    /* === Contenu principal et sections génériques === */
     main { padding: 28px 0 64px; }
 
     section{
@@ -312,6 +316,7 @@
       margin-top: 18px;
     }
 
+    /* === Boutons : primaire (bleu plein) et fantôme (bordure légère) === */
     .btn{
       display: inline-flex;
       align-items: center;
@@ -352,6 +357,7 @@
       align-content: start;
     }
 
+    /* === Mini-cards pliables (section profil, details/summary) === */
     .mini{
       border-radius: var(--radius-sm);
       border: 1px solid rgba(226, 232, 240, 0.95);
@@ -404,12 +410,14 @@
       font-size: 0.92rem;
     }
 
+    /* === Grille contenant les cards projets et engagements === */
     .projects-list{
       display: grid;
       grid-template-columns: 1fr;
       gap: 14px;
     }
 
+    /* === Card projet individuelle : details/summary pliable, hover et état ouvert === */
     .project{
       border-radius: var(--radius-sm);
       border: 1px solid rgba(226, 232, 240, 0.95);
@@ -622,6 +630,7 @@
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
+  <!-- ══════════ HEADER : barre de navigation principale ══════════ -->
   <header id="top" aria-label="Navigation principale">
     <div class="container">
       <div class="nav">
@@ -645,9 +654,11 @@
     </div>
   </header>
 
+  <!-- ══════════ MAIN : contenu de la page ══════════ -->
   <main id="contenu" class="container" tabindex="-1">
-    <!-- HERO -->
+    <!-- PROFIL -->
     <section id="profil" class="card reveal" aria-labelledby="hero-title" style="padding:22px;">
+      <!-- Grille héro : colonne gauche (intro + boutons) / colonne droite (mini-cards) -->
       <div class="hero">
         <div>
           <h1 id="hero-title">Testeuse logiciels / QA</h1>
@@ -668,7 +679,9 @@
           </div>
         </div>
 
+        <!-- Colonne droite : mini-cards résumé pliables -->
         <aside class="hero-side" aria-label="Résumé rapide">
+          <!-- Mini-card 1 : philosophie qualité (fil rouge) -->
           <details class="mini">
             <summary>
               <h3>Mon fil rouge : la qualité</h3>
@@ -686,6 +699,7 @@
             </div>
           </details>
 
+          <!-- Mini-card 2 : attentes et type de poste recherché -->
           <details class="mini">
             <summary>
               <h3>Ce que je cherche</h3>
@@ -701,6 +715,7 @@
             </div>
           </details>
 
+          <!-- Mini-card 3 : soft skills et organisation personnelle -->
           <details class="mini">
             <summary>
               <h3>Qui je suis</h3>
@@ -719,6 +734,7 @@
             </div>
           </details>
 
+          <!-- Mini-card 4 : RQTH, bésoins ergonomiques -->
           <details class="mini">
             <summary>
               <h3>Parlons de ma RQTH</h3>
@@ -744,6 +760,7 @@
             </div>
           </details>
 
+          <!-- Mini-card 5 : situation actuelle, formations en cours -->
           <details class="mini">
             <summary>
               <h3>Actuellement</h3>
@@ -1098,6 +1115,7 @@
             </div>
           </details>
 
+          <!-- ── Card Groupement d'achat Janzé ── -->
           <details class="project" role="listitem">
             <summary>
               <div class="project-visual">
@@ -1202,6 +1220,7 @@
             </div>
           </details>
 
+          <!-- ── Card Orange — Stage QA (portail pilotage sécurité) ── -->
           <details class="project" role="listitem">
             <summary>
               <div class="project-visual">
@@ -1267,7 +1286,6 @@
                 <span class="chip">Tableau de bord</span>
                 <span class="chip">Vulnérabilités</span>
                 <span class="chip">Scope</span>
-                <span class="chip">Coralys</span>
                 <span class="chip">Tests fonctionnels</span>
                 <span class="chip">Accessibilité</span>
                 <span class="chip">RGAA</span>
@@ -1277,6 +1295,7 @@
             </div>
           </details>
 
+          <!-- ── Card Linux — Raspberry Pi, SSH, Python ── -->
           <details class="project" role="listitem">
             <summary>
               <div class="project-visual" aria-hidden="true">
@@ -1328,6 +1347,7 @@
             </div>
           </details>
 
+          <!-- ── Card ISTQBingBang — jeu de cartes ISTQB en mode Agile ── -->
           <details class="project" role="listitem">
             <summary>
               <div class="project-visual">
@@ -1388,6 +1408,7 @@
       </div>
     </section>
 
+    <!-- ENGAGEMENTS -->
     <section id="engagements" class="card reveal" aria-labelledby="engagements-title">
       <div class="section-head">
         <h2 id="engagements-title">Mes engagements</h2>
@@ -1395,6 +1416,7 @@
       </div>
       <div class="section-body">
         <div class="projects-list" role="list">
+          <!-- ── Card CER — Comité d'Éthique de Recherche ── -->
           <details class="project" role="listitem">
             <summary>
               <div class="project-visual" aria-hidden="true">CER</div>
@@ -1453,6 +1475,7 @@
             </div>
           </details>
 
+          <!-- ── Card LADAPT — Réseau des Bénévoles, Ille-et-Vilaine ── -->
           <details class="project" role="listitem">
             <summary>
               <div class="project-visual" aria-hidden="true">LADAPT</div>
@@ -1510,6 +1533,7 @@
             </div>
           </details>
 
+          <!-- ── Card Témoignages — OncoBretagne & LADAPT ── -->
           <details class="project" role="listitem">
             <summary>
               <div class="project-visual" aria-hidden="true">TÉM</div>
@@ -1583,6 +1607,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="card reveal" aria-labelledby="contact-title">
       <div class="section-head">
         <h2 id="contact-title">Contact</h2>
@@ -1605,6 +1630,7 @@
       </div>
     </section>
 
+    <!-- ══════════ FOOTER ══════════ -->
     <footer aria-label="Pied de page">
       <div class="footer-inner">
         <div>
@@ -1620,6 +1646,7 @@
     </footer>
   </main>
 
+  <!-- ══════════ SCRIPTS ══════════ -->
   <script>
     (function () {
       // Année automatique
