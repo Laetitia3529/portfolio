@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+
+  <title>Laëtitia Domenger — Assistante administrative / Secrétaire (Rennes, France)</title>
+  <meta name="description" content="Portfolio one-page de Laëtitia Domenger, assistante administrative / secrétaire à Rennes (France) : compétences, expériences, engagements, contact." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="[INSÈRE TON URL ICI]" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Laëtitia Domenger — Assistante administrative / Secrétaire" />
+  <meta property="og:description" content="Gestion administrative, relation humaine et organisation : compétences, expériences, engagements, contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="[INSÈRE TON URL ICI]" />
+  <meta property="og:image" content="[INSÈRE UNE IMAGE OG ICI - optionnel]" />
+
+  <!-- Twitter (optionnel) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Laëtitia Domenger — Assistante administrative / Secrétaire" />
+  <meta name="twitter:description" content="Portfolio secrétariat : compétences, expériences, engagements, contact." />
+  <meta name="twitter:image" content="[INSÈRE UNE IMAGE TWITTER ICI - optionnel]" />
+
+  <!-- Google Font (léger, sans framework) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* === Variables CSS : thème, couleurs, ombres, rayons, largeur max === */
+    :root{
+      --bg: #f7f9fc;
+      --surface: #ffffff;
+      --text: #0f172a;         /* slate-900 */
+      --muted: #334155;        /* slate-700 */
+      --line: #e2e8f0;         /* slate-200 */
+      --primary: #0b4ea2;      /* bleu sobre */
+      --primary-2: #0f766e;    /* vert mouton (accent secondaire) */
+      --shadow: 0 10px 30px rgba(2, 8, 23, 0.08);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --max: 1100px;
+    }
+
+    /* === Reset & styles de base === */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(11,78,162,0.10), transparent 50%),
+                  radial-gradient(900px 500px at 95% 10%, rgba(15,118,110,0.10), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+      outline: 3px solid rgba(11,78,162,0.25);
+      outline-offset: 2px;
+      border-radius: 10px;
+    }
+
+    /* Skip link */
+    .skip-link{
+      position: absolute;
+      left: -9999px;
+      top: 10px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      z-index: 9999;
+    }
+    .skip-link:focus{ left: 10px; }
+
+    /* Layout */
+    .container{
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    /* === Header : sticky, fond semi-transparent, flou d'arrière-plan === */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 249, 252, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.75);
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+
+    .brand{
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 220px;
+    }
+    .brand strong{
+      font-size: 0.98rem;
+      letter-spacing: -0.02em;
+    }
+    .brand span{
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .nav-links{
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a{
+      font-size: 0.92rem;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+    }
+
+    .nav-links a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,0.7);
+      border-color: rgba(226, 232, 240, 0.9);
+    }
+
+    .nav-cta{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(11,78,162,0.25);
+      background: rgba(11,78,162,0.08);
+      color: var(--text);
+      font-weight: 600;
+      transition: transform 120ms ease, background 150ms ease, border-color 150ms ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover{
+      transform: translateY(-1px);
+      border-color: rgba(11,78,162,0.40);
+      background: rgba(11,78,162,0.12);
+    }
+
+    /* Mobile menu */
+    .menu-btn{
+      display: none;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: rgba(255,255,255,0.7);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .sr-only{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .burger{
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      width: 18px;
+      height: 14px;
+    }
+    .burger span{
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: var(--text);
+      border-radius: 999px;
+    }
+
+    /* === Contenu principal et sections génériques === */
+    main { padding: 28px 0 64px; }
+
+    section{
+      scroll-margin-top: 92px;
+      margin-top: 22px;
+    }
+
+    .card{
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    #profil{
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    #profil::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(11,78,162,0.10), transparent 45%),
+        linear-gradient(300deg, rgba(15,118,110,0.10), transparent 55%);
+      z-index: 0;
+    }
+    #profil > *{
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-head{
+      padding: 22px 22px 10px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2{
+      margin: 0;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .section-body{
+      padding: 18px 22px 22px;
+    }
+
+    /* Hero */
+    .hero{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      display: none;
+    }
+
+    .hero h1{
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .hero .subtitle{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero .meta{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      background: rgba(255,255,255,0.7);
+      color: var(--muted);
+      font-size: 0.80rem;
+    }
+
+    .hero-actions{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    /* === Boutons : primaire (bleu plein) et fantôme (bordure légère) === */
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-weight: 700;
+      transition: transform 120ms ease, box-shadow 150ms ease, background 150ms ease, border-color 150ms ease;
+      user-select: none;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn-primary{
+      background: #0b4ea2;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(11,78,162,0.20);
+    }
+    .btn-primary:hover{
+      background: #083d82;
+      box-shadow: 0 12px 28px rgba(11,78,162,0.26);
+    }
+    .btn-ghost{
+      background: rgba(255,255,255,0.75);
+      border-color: rgba(226, 232, 240, 0.95);
+      color: var(--text);
+    }
+    .btn-ghost:hover{
+      border-color: rgba(11,78,162,0.28);
+      background: rgba(255,255,255,0.88);
+    }
+
+    .hero-side{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      align-content: start;
+    }
+
+    /* === Mini-cards pliables (section profil, details/summary) === */
+    .mini{
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      background: rgba(255,255,255,0.72);
+      overflow: hidden;
+    }
+    .mini > summary{
+      list-style: none;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 14px;
+      user-select: none;
+    }
+    .mini > summary::-webkit-details-marker{ display: none; }
+    .mini > summary:focus-visible{
+      outline: 3px solid rgba(11,78,162,0.25);
+      outline-offset: -3px;
+      border-radius: var(--radius-sm);
+    }
+    .mini h3{
+      margin: 0;
+      font-size: 0.98rem;
+      letter-spacing: -0.02em;
+    }
+    .mini-hint{
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .mini[open] .mini-hint{ color: rgba(11, 78, 162, 0.95); }
+    .mini .when-open{ display: none; }
+    .mini[open] .when-open{ display: inline; }
+    .mini[open] .when-closed{ display: none; }
+
+    .mini-body{ padding: 0 14px 14px; }
+    .mini-teaser{
+      grid-column: 1 / -1;
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .mini p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* === Grille contenant les cards projets et engagements === */
+    .projects-list{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    /* === Card projet individuelle : details/summary pliable, hover et état ouvert === */
+    .project{
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      background: rgba(255,255,255,0.72);
+      overflow: hidden;
+    }
+    .project > summary{
+      list-style: none;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 12px;
+      padding: 14px;
+      align-items: center;
+      user-select: none;
+    }
+    .project > summary::-webkit-details-marker{ display: none; }
+    .project > summary:focus-visible{
+      outline: 3px solid rgba(11,78,162,0.25);
+      outline-offset: -3px;
+      border-radius: var(--radius-sm);
+    }
+    .project:hover{
+      border-color: rgba(11,78,162,0.22);
+    }
+    .project[open]{
+      border-color: rgba(11,78,162,0.26);
+      box-shadow: 0 10px 26px rgba(11,78,162,0.10);
+    }
+
+    .project-visual{
+      width: 110px;
+      height: 84px;
+      border-radius: 12px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(11,78,162,0.16), rgba(15,118,110,0.14));
+      display: grid;
+      place-items: center;
+      color: rgba(11,78,162,0.95);
+    }
+    .project-visual img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: inherit;
+    }
+
+    .project-title{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .project-title h3{
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      min-width: 0;
+    }
+    .project-title .tag{
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .project-hint{
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .project[open] .project-hint{ color: rgba(11, 78, 162, 0.95); }
+    .project .when-open{ display: none; }
+    .project[open] .when-open{ display: inline; }
+    .project[open] .when-closed{ display: none; }
+
+    .visit-link{
+      color: rgba(11, 78, 162, 0.95);
+      font-weight: 700;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      line-height: 1;
+    }
+    .visit-link:hover{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .project-body{ padding: 0 14px 14px; }
+    .project-body p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .project-body .meta{
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .screens{
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .screens img{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{ grid-template-columns: 1fr; }
+      .hero-side{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .grid-2{ grid-template-columns: 1fr; }
+      .contact{ grid-template-columns: 1fr; }
+      .brand{ min-width: auto; }
+      .nav-links{
+        display: flex;
+        position: fixed;
+        top: 72px;
+        right: 16px;
+        width: min(280px, calc(100vw - 32px));
+        max-height: calc(100vh - 92px);
+        overflow: auto;
+        padding: 10px;
+        border-radius: 14px;
+        border: 1px solid rgba(226, 232, 240, 0.95);
+        background: rgba(255,255,255,0.98);
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        transform: translateX(120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 180ms ease, opacity 180ms ease;
+        z-index: 60;
+      }
+      .menu-btn{ display: inline-flex; align-items: center; gap: 8px; }
+    }
+    @media (max-width: 460px){
+      .project > summary{ grid-template-columns: 1fr; }
+      .project-visual{ width: 100%; height: 92px; }
+      .project-title{ justify-content: flex-start; }
+      .screens{ grid-template-columns: 1fr; }
+    }
+    header[data-open="true"] .nav-links{
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    header[data-open="true"] .nav-links a{
+      font-size: 0.86rem;
+      padding: 6px 8px;
+    }
+    @media (min-width: 981px){
+      .hero{
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .hero-side{
+        grid-template-columns: 1fr;
+        gap: 12px;
+        align-content: start;
+      }
+      .nav{ flex-wrap: wrap; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      .reveal{ transition: none; }
+      .btn, .nav-links a, .nav-cta{ transition: none; }
+      .btn:hover, .nav-cta:hover{ transform: none; }
+    }
+
+    /* === Nom plus visible dans la barre du haut === */
+    .brand strong{
+      font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+    }
+
+    /* === Intitulé du poste plus discret que le nom === */
+    .hero h1{
+      font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+    }
+
+    /* === Chips / tags / footer === */
+    .chip, .tag{
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(11,78,162,0.18);
+      background: rgba(11,78,162,0.06);
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    footer{
+      margin-top: 26px;
+      padding: 18px 4px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .footer-inner{ display: grid; gap: 6px; }
+
+    /* === Grille compétences === */
+    .skills{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .skill{
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      background: rgba(255,255,255,0.72);
+      padding: 14px;
+    }
+    .skill h3{
+      margin: 0 0 8px;
+      font-size: 0.98rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill h3 .dot{
+      width: 10px; height: 10px; border-radius: 999px; background: var(--primary); flex-shrink: 0;
+    }
+    .skill:nth-child(even) h3 .dot{ background: var(--primary-2); }
+    .skill ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .skill li + li{ margin-top: 3px; }
+
+    /* === Encadrés "à compléter" (à supprimer une fois remplis) === */
+    .todo{
+      display: inline;
+      background: rgba(234,179,8,0.16);
+      border: 1px dashed #ca8a04;
+      border-radius: 6px;
+      padding: 1px 6px;
+      color: #854d0e;
+      font-size: 0.88em;
+      font-weight: 600;
+    }
+    .todo-banner{
+      margin-top: 18px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px dashed #ca8a04;
+      background: rgba(234,179,8,0.10);
+      color: #854d0e;
+      font-size: 0.88rem;
+    }
+  </style>
+
+  <!-- SEO: JSON-LD (à personnaliser) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Laëtitia Domenger",
+    "jobTitle": "Assistante administrative / Secrétaire",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rennes",
+      "addressCountry": "FR"
+    },
+    "url": "[INSÈRE TON URL ICI]",
+    "sameAs": [
+      "[INSÈRE TON URL LINKEDIN ICI]"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ══════════ HEADER : barre de navigation principale ══════════ -->
+  <header id="top" aria-label="Navigation principale">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Retour en haut de la page">
+          <strong>Laëtitia Domenger</strong>
+          <span>Assistante administrative / Secrétaire — Rennes, France</span>
+        </a>
+
+        <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+          <span class="sr-only">Menu</span>
+          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#profil">Profil</a>
+          <a href="#competences">Compétences</a>
+          <a class="nav-cta" href="#experiences">Expériences</a>
+          <a href="#engagements">Engagements</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════ MAIN : contenu de la page ══════════ -->
+  <main id="contenu" class="container" tabindex="-1">
+
+    <!-- PROFIL -->
+    <section id="profil" class="card reveal" aria-labelledby="hero-title" style="padding:22px;">
+      <div class="hero">
+        <div>
+          <h1 id="hero-title">Assistante administrative / Secrétaire</h1>
+
+          <div class="meta" aria-label="Informations clés">
+            <span class="pill">Rennes, France</span>
+            <span class="pill">Gestion administrative &amp; suivi de dossiers</span>
+            <span class="pill">Relation humaine &amp; accueil</span>
+            <span class="pill">Organisation &amp; planning</span>
+            <span class="pill">Rédaction &amp; mise en forme</span>
+            <span class="pill">Confidentialité (RGPD)</span>
+            <span class="pill">Outils : Word, Excel, Outlook, PowerPoint, Confluence, Jira</span>
+            <span class="pill">Reconversion : compétences transversales</span>
+          </div>
+
+          <div class="hero-actions" role="group" aria-label="Actions principales">
+            <a class="btn btn-ghost" href="#experiences">Voir mes expériences</a>
+            <a class="btn btn-ghost" href="#engagements">Mes engagements</a>
+            <a class="btn btn-primary" href="#contact">Voir le contact</a>
+          </div>
+        </div>
+
+        <!-- Colonne droite : mini-cards résumé pliables -->
+        <aside class="hero-side" aria-label="Résumé rapide">
+          <!-- Mini-card 1 : fil rouge -->
+          <details class="mini">
+            <summary>
+              <h3>Mon fil rouge : l’organisation</h3>
+              <span class="mini-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></span>
+              <p class="mini-teaser">Une manière de travailler : partir du besoin, structurer, suivre, vérifier.</p>
+            </summary>
+            <div class="mini-body">
+              <p>
+                Ma déformation professionnelle, c’est l’organisation, la rigueur et la curiosité. Je l’applique dans ma vie perso, je ne sais pas faire autrement, pour n’importe quel projet.
+                <br /><br />
+                Au secrétariat, cette déformation devient un atout : un agenda tenu, des dossiers classés et à jour, des délais respectés, des documents propres et une information qui circule au bon moment vers les bonnes personnes.
+                <br /><br />
+                Dans la coiffure, dans l’informatique comme au secrétariat, on part d’un besoin, on clarifie ce qu’on doit faire, on choisit une méthode, on utilise des outils, on vérifie le résultat et on s’assure qu’il correspond à l’attente. L’objet change, la logique reste la même.
+              </p>
+            </div>
+          </details>
+
+          <!-- Mini-card 2 : attentes et type de poste recherché -->
+          <details class="mini">
+            <summary>
+              <h3>Ce que je cherche</h3>
+              <span class="mini-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></span>
+              <p class="mini-teaser">Un poste de secrétaire / assistante dans un cadre où l’humain compte autant que les projets.</p>
+            </summary>
+            <div class="mini-body">
+              <p>
+                En reconversion, je mets au service du secrétariat les compétences construites en 30 ans de coiffure, dont 15 en indépendante, et pendant ma formation en informatique à l’ENI.
+                <br /><br />
+                Je recherche un poste de <strong>secrétaire ou d’assistante administrative</strong> en CDD, CDI, à temps complet, à temps partiel, ou dans le cadre d’un contrat POEI, au sein d’une entreprise où l’humain a autant d’importance que les projets.
+                <br /><br />
+                Ce qui compte, c’est ce qui fait de chacun de nous une personne ou une entreprise unique : nos parcours, nos rencontres, nos expériences. C’est cette singularité que je souhaite mettre au service d’une entreprise qui a ses propres valeurs et sa propre identité.
+              </p>
+            </div>
+          </details>
+
+          <!-- Mini-card 3 : soft skills et organisation personnelle -->
+          <details class="mini">
+            <summary>
+              <h3>Qui je suis</h3>
+              <span class="mini-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></span>
+              <p class="mini-teaser">Fiable, organisée, discrète et motivée par les projets collectifs à forte utilité.</p>
+            </summary>
+            <div class="mini-body">
+              <p>
+                Je suis une personne patiente et résiliente, des qualités souvent soulignées par mon entourage, sans prétention.
+                <br />J’ai un capital sympathie qui me permet de m’intégrer facilement, et je m’investis dans des associations en tant que bénévole.
+                <br /><br />Organisée de nature, je structure mes journées comme un planning pro même en recherche d’emploi (perso en bleu, pro en vert, urgences en rouge).
+                <br />Je poursuis ma formation via vidéos, Coursera et podcasts.
+                <br />Autonome et proactive, je prends l’initiative d’avancer sur mes missions, d’anticiper les besoins et de faire une veille régulière pour rester à jour sur les bonnes pratiques et les outils.
+                <br />En stage, j’ai su alerter l’équipe sur une fausse direction et justifier mes choix avec succès.
+                <br />Habituée aux informations sensibles (comité d’éthique, données de santé), je sais faire preuve de discrétion.
+                <br />Dans ma vie privée, j’organise des treks avec des amies et je m’investis dans des associations et l’humanitaire.
+              </p>
+            </div>
+          </details>
+
+          <!-- Mini-card 4 : RQTH, besoins ergonomiques -->
+          <details class="mini">
+            <summary>
+              <h3>Parlons de ma RQTH</h3>
+              <span class="mini-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></span>
+              <p class="mini-teaser">Un handicap léger et invisible, avec des besoins simples pour travailler au mieux.</p>
+            </summary>
+            <div class="mini-body">
+              <p>
+                Soyez rassurés : mon handicap, il est léger, invisible, mais il est là. Des douleurs chroniques. Pas quelque chose qui se voit, mais qui peut me compliquer la vie si je ne fais pas attention.
+                <br /><br />J’ai appris à vivre avec, à m’adapter. Et surtout, j’ai appris une chose : quand on a été un peu ballotté par la vie, on devient costaud, résistant. Et surtout, on cherche des solutions, pas des problèmes.
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Mes besoins pour travailler au mieux :</strong>
+                <br />- une chaise sans accoudoirs (ils me font plus de mal que de bien)
+                <br />- un repose-bras à part, pour soulager mes épaules
+                <br />- une souris centrée RollerMouse
+                <br />- un repose-pieds
+                <br />- deux écrans, pour éviter de tourner la tête dans tous les sens
+                <br /><br />Voilà, rien d’exceptionnel. Juste de quoi me permettre de me concentrer sur l’essentiel : mon travail, et ce que je peux apporter à votre équipe.
+              </p>
+            </div>
+          </details>
+
+          <!-- Mini-card 5 : situation actuelle -->
+          <details class="mini">
+            <summary>
+              <h3>Actuellement</h3>
+              <span class="mini-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></span>
+              <p class="mini-teaser">Je me forme en continu (dont l’anglais) et je développe mon profil sur le terrain.</p>
+            </summary>
+            <div class="mini-body">
+              <p>
+                <!-- TODO: Mets à jour ce bloc au fil du temps -->
+                Sortie de ma <strong>formation en informatique (ENI)</strong>, j’ai acquis une vraie aisance avec les outils numériques et une rigueur dans la documentation et le suivi. Je complète mon profil avec des engagements bénévoles variés : coopérative, comité d’éthique de recherche, réseau des bénévoles LADAPT.
+                <br />Je prends des cours d’anglais avec <strong>Wall Street English</strong> jusqu’à <strong>septembre 2026</strong>.
+                <br />J’ai suivi la formation <strong>Premiers Secours en Santé Mentale</strong>, un vrai plus pour l’accueil du public.
+                <br />J’aime l’idée d’une double casquette : le secrétariat pour l’organisation et le lien humain, et une aisance avec les outils numériques pour travailler efficacement et gagner du temps au quotidien.
+              </p>
+            </div>
+          </details>
+        </aside>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="competences" class="card reveal" aria-labelledby="skills-title">
+      <div class="section-head">
+        <h2 id="skills-title">Compétences</h2>
+        <p>Ce que j’apporte au quotidien d’un secrétariat</p>
+      </div>
+      <div class="section-body">
+        <div class="skills">
+          <div class="skill">
+            <h3><span class="dot" aria-hidden="true"></span>Gestion administrative</h3>
+            <ul>
+              <li>Traitement et suivi de dossiers (comité d’éthique : délai de 3 semaines)</li>
+              <li>Comptes rendus de relecture de mémoires</li>
+              <li>Classement, archivage, structuration de l’information (Confluence)</li>
+              <li>Montage d’un dossier prévisionnel (budget, aides, démarches)</li>
+              <li>Respect de la confidentialité et du RGPD</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3><span class="dot" aria-hidden="true"></span>Relation humaine &amp; accueil</h3>
+            <ul>
+              <li>Accueil physique et téléphonique du public</li>
+              <li>Écoute, reformulation, gestion de situations délicates</li>
+              <li>Accueil de publics fragiles (PSSM, bénévolat handicap)</li>
+              <li>Travail en équipe avec des profils variés</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3><span class="dot" aria-hidden="true"></span>Organisation &amp; planning</h3>
+            <ul>
+              <li>Gestion d’agenda et de rendez-vous</li>
+              <li>Organisation de réunions et d’événements (préparation, réservations, coordination)</li>
+              <li>Co-organisation d’une journée de prévention santé avec 5 partenaires (février 2027)</li>
+              <li>Priorisation et anticipation des imprévus</li>
+              <li>Suivi des échéances et des délais</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3><span class="dot" aria-hidden="true"></span>Rédaction &amp; communication</h3>
+            <ul>
+              <li>Rédaction de documents structurés (plans, rapports, synthèses)</li>
+              <li>Présentations PowerPoint</li>
+              <li>Transmission d’avis et de comptes rendus</li>
+              <li>Prise de parole en public (table ronde, journée régionale)</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3><span class="dot" aria-hidden="true"></span>Outils numériques</h3>
+            <ul>
+              <li>Word, Excel, PowerPoint, Outlook</li>
+              <li>Confluence, Jira (suivi et indicateurs)</li>
+              <li>Outils d’IA pour gagner du temps</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3><span class="dot" aria-hidden="true"></span>Langues</h3>
+            <ul>
+              <li>Français : langue maternelle</li>
+              <li>Anglais : niveau A2, en progression (Wall Street English, jusqu’à septembre 2026)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPÉRIENCES -->
+    <section id="experiences" class="card reveal" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title">Parcours &amp; compétences transversales</h2>
+        <p>Ce que mon parcours apporte à un poste de secrétariat</p>
+      </div>
+      <div class="section-body">
+        <div class="projects-list" role="list">
+
+          <!-- ── Card Coiffure ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true" style="font-size:0.85rem; font-weight:700; letter-spacing:0.03em;">30 ANS</div>
+              <div>
+                <div class="project-title">
+                  <h3>Coiffeuse indépendante — Gestion administrative, planification et accueil</h3>
+                  <span class="tag">Métier</span>
+                </div>
+                <div class="project-hint">
+                  <span class="when-closed">Voir plus</span><span class="when-open">Réduire</span>
+                </div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> 30 ans de métier, dont 15 ans en salon puis 15 ans comme coiffeuse indépendante à domicile. En tant qu’indépendante, j’étais à la fois la coiffeuse, l’accueil, le planning et le bureau : toute l’organisation et la gestion de l’activité reposaient sur moi.
+              </p>
+
+              <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; text-align:center;">
+                <div style="background:rgba(11,78,162,0.06); border:1px solid rgba(11,78,162,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0b4ea2;">30</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">ans d’expérience</div>
+                </div>
+                <div style="background:rgba(15,118,110,0.06); border:1px solid rgba(15,118,110,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0f766e;">15</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">ans en salon</div>
+                </div>
+                <div style="background:rgba(11,78,162,0.06); border:1px solid rgba(11,78,162,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0b4ea2;">15</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">ans à domicile</div>
+                </div>
+              </div>
+
+              <p style="margin-top:14px;">
+                <strong>Ce que ce métier m’a appris, côté secrétariat :</strong>
+                <br />- accueillir, écouter et reformuler la demande du client
+                <br />- tenir un agenda de rendez-vous et gérer les annulations et imprévus
+                <br />- organiser mes tournées à domicile (itinéraires, horaires, matériel)
+                <br />- gérer l’encaissement et le suivi de l’activité
+                <br />- assurer seule la gestion administrative de mon activité d’indépendante
+                <br />- fidéliser une clientèle sur la durée, avec discrétion et bienveillance
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Dossier prévisionnel :</strong> j’ai monté un dossier complet de création de micro-entreprise : statut juridique, hypothèses, besoins de financement, chiffre d’affaires et charges prévisionnels, aides (ACRE), assurances. Un vrai travail de gestion administrative et budgétaire.
+              </p>
+
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Accueil</span>
+                <span class="chip">Prise de rendez-vous</span>
+                <span class="chip">Relation humaine</span>
+                <span class="chip">Encaissement</span>
+                <span class="chip">Gestion d’activité</span>
+                <span class="chip">Budget prévisionnel</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- ── Card Orange ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual">
+                <img src="Orange.png" alt="Orange" loading="lazy" decoding="async" />
+              </div>
+              <div>
+                <div class="project-title">
+                  <h3>Orange — Stage en environnement professionnel</h3>
+                  <span class="tag">Stage</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> stage au sein d’une équipe Orange travaillant sur un portail interne de pilotage de la sécurité. Une immersion dans une grande entreprise, avec ses process, ses outils et ses rituels d’équipe.
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Compétences transférables au secrétariat :</strong>
+                <br />- participation aux réunions quotidiennes et coordination avec plusieurs interlocuteurs (UI/UX, développeurs, Product Owner, tuteur)
+                <br />- suivi d’indicateurs et reporting dans Jira (avancement, anomalies, corrections)
+                <br />- rédaction et structuration de documents de suivi
+                <br />- respect des règles et des normes (accessibilité RGAA, 106 critères)
+                <br />- mise en place d’une organisation pérenne pour l’équipe
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Coordination</span>
+                <span class="chip">Réunions</span>
+                <span class="chip">Reporting</span>
+                <span class="chip">Jira</span>
+                <span class="chip">Documentation</span>
+                <span class="chip">Grande entreprise</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- ── Card CER ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true">CER</div>
+              <div>
+                <div class="project-title">
+                  <h3>CER (Comité d’Éthique de Recherche)<br /><span style="font-weight:400; font-size:0.9rem;">Relecture, comptes rendus et suivi de dossiers</span></h3>
+                  <span class="tag">Engagement</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Mission :</strong> évaluer les projets de recherche (mémoires, publications, études) qui nécessitent un avis éthique, en binôme professionnel / partie civile.
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Un circuit de dossier très proche du secrétariat :</strong>
+                <br />- réception et relecture des dossiers (mémoires, publications) selon une grille d’évaluation définie
+                <br />- rédaction d’un compte rendu de relecture pour chaque mémoire évalué
+                <br />- respect d’un délai de 3 semaines pour rendre chaque évaluation
+                <br />- transmission des remarques à l’autre rapporteur et à la présidente
+                <br />- compilation des avis communiqués à l’investigateur (favorable, sous réserve, défavorable)
+                <br />- confidentialité stricte : RGPD, consentement éclairé, anonymisation, stockage sécurisé
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Gestion de dossiers</span>
+                <span class="chip">Délais</span>
+                <span class="chip">Confidentialité</span>
+                <span class="chip">RGPD</span>
+                <span class="chip">Comptes rendus</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- ── Card Groupement d'achat ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual">
+                <img src="groupement-achat.png" alt="Groupement d’achat" loading="lazy" decoding="async" />
+              </div>
+              <div>
+                <div class="project-title">
+                  <h3>Groupement d’achat Janzé — Documentation structurée</h3>
+                  <span class="tag">Partenariat</span>
+                </div>
+                <div class="project-hint">
+                  <span class="when-closed">Voir plus</span><span class="when-open">Réduire</span>
+                  <a class="visit-link" href="https://groupement-achat-jans.fr/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">Visiter le site</a>
+                </div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> préparation et structuration d’une démarche complète pour le site d’un groupement d’achat, organisée dans un espace Confluence.
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Ce que j’ai produit :</strong>
+                <br />- un document de référence structuré : objectifs, périmètre, planification, risques, approbations
+                <br />- une arborescence claire pour retrouver l’information rapidement
+                <br />- un suivi des points à traiter et de leur avancement
+                <br />- des schémas pour rendre l’information lisible par tous
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Confluence</span>
+                <span class="chip">Rédaction</span>
+                <span class="chip">Classement</span>
+                <span class="chip">Planification</span>
+                <span class="chip">Suivi</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- ── Card Trek Tro Breiz ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true">TRB</div>
+              <div>
+                <div class="project-title">
+                  <h3>Trek Tro Breiz — Organiser, coordonner, se dépasser<br /><span style="font-weight:400; font-size:0.9rem;">2 jours · entre amies · Bretagne</span></h3>
+                  <span class="tag">Projet perso</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p><em>Un projet mené de A à Z, et la preuve que l’organisation est une seconde nature.</em></p>
+              <p style="margin-top:10px;">
+                <strong>Ce que j’ai produit :</strong>
+                <br />- un PowerPoint de préparation couvrant l’ensemble du projet
+                <br />- des réunions de préparation avec le groupe
+                <br />- un programme de préparation physique
+                <br />- l’organisation des étapes et des randonnées
+                <br />- la réservation et la coordination des hébergements
+                <br />- l’anticipation et la gestion des imprévus sur le terrain
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Ce que j’en retiens :</strong> je ne subis pas l’organisation, je la cherche. Planifier, réserver, anticiper, ajuster en temps réel : c’est exactement ce qu’on attend d’une assistante.
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Organisation d’événement</span>
+                <span class="chip">Réservations</span>
+                <span class="chip">Réunions</span>
+                <span class="chip">PowerPoint</span>
+                <span class="chip">Gestion des imprévus</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- ── Card ENI ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true">ENI</div>
+              <div>
+                <div class="project-title">
+                  <h3>Formation en informatique (ENI) — Un atout numérique</h3>
+                  <span class="tag">Formation</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> formation suivie à l’ENI (Chartres-de-Bretagne), avec un projet en trinôme mené en mode Agile.
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Ce que j’en garde pour le secrétariat :</strong>
+                <br />- une aisance avec les outils numériques et collaboratifs
+                <br />- la rigueur dans la vérification : relire, contrôler, ne rien laisser passer
+                <br />- l’habitude de documenter et de tracer chaque action
+                <br />- l’organisation du travail en équipe : tâches, priorités, échéances, points d’avancement
+              </p>
+              <p style="margin-top:10px;">
+                Mon portfolio informatique est toujours en ligne :
+                <a class="visit-link" href="https://laetitia3529.github.io/portfolio/" target="_blank" rel="noopener noreferrer">voir le portfolio informatique</a>
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Rigueur</span>
+                <span class="chip">Outils numériques</span>
+                <span class="chip">Travail en équipe</span>
+                <span class="chip">Agile</span>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENTS -->
+    <section id="engagements" class="card reveal" aria-labelledby="engagements-title">
+      <div class="section-head">
+        <h2 id="engagements-title">Mes engagements</h2>
+        <p>Quelques engagements et activités qui me tiennent à cœur</p>
+      </div>
+      <div class="section-body">
+        <div class="projects-list" role="list">
+
+          <!-- ── Card CCAS ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true">CCAS</div>
+              <div>
+                <div class="project-title">
+                  <h3>CCAS d’Andouillé-Neuville<br /><span style="font-weight:400; font-size:0.9rem;">Membre du CCAS · organisation d’une journée de prévention</span></h3>
+                  <span class="tag">Engagement</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> le CCAS met en œuvre l’action sociale de la commune : aides aux habitants, accompagnement des personnes âgées, des familles et des personnes en difficulté.
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Mon rôle de membre :</strong>
+                <br />- participer aux réunions du CCAS
+                <br />- apporter un autre regard, nourri de mes expériences professionnelles et de mes rencontres de ces dernières années
+                <br />- faire remonter les besoins de la commune et de tous ses citoyens
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Ma conviction :</strong> chaque citoyen peut devenir une ressource pour quelqu’un.
+              </p>
+
+              <p style="font-size:1.05rem; font-weight:800; background:#0b4ea2; color:#ffffff; border-radius:6px; padding:10px 16px; margin-top:16px; letter-spacing:0.02em;">AN’Gagés contre le cancer&nbsp;&nbsp;|&nbsp;&nbsp;<span style="color:rgba(255,255,255,0.75); font-weight:600;">5 février 2027</span></p>
+              <p style="margin-top:12px;">
+                <strong>Projet en cours :</strong> dans le cadre du CCAS, je co-organise avec deux habitantes une journée de sensibilisation et de prévention du cancer à Andouillé-Neuville. Notre objectif : informer, prévenir, accompagner, sans tabou, et faire savoir que des ressources existent près de chez nous.
+              </p>
+
+              <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; text-align:center;">
+                <div style="background:rgba(11,78,162,0.06); border:1px solid rgba(11,78,162,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0b4ea2;">3</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">co-organisatrices</div>
+                </div>
+                <div style="background:rgba(15,118,110,0.06); border:1px solid rgba(15,118,110,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0f766e;">5</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">structures partenaires</div>
+                </div>
+                <div style="background:rgba(11,78,162,0.06); border:1px solid rgba(11,78,162,0.15); border-radius:10px; padding:12px 8px;">
+                  <div style="font-size:1.5rem; font-weight:700; color:#0b4ea2;">5</div>
+                  <div style="font-size:0.78rem; color:var(--muted); margin-top:2px;">axes de prévention</div>
+                </div>
+              </div>
+
+              <p style="margin-top:14px;">
+                <strong>Le programme de la journée :</strong>
+                <br />- prévenir et dépister avec le CEMonBus du centre Eugène Marquis (dépistage, alcool, tabac, alimentation, activité physique), avec un bilan prévention de 45 minutes sur inscription
+                <br />- faire connaître les ressources, avant, pendant et après la maladie, et pour les proches
+                <br />- libérer la parole : ateliers, témoignages et temps festifs
+                <br />- une conférence sur invitation pour les chefs d’entreprise, sur l’accompagnement d’un salarié malade et son retour à l’emploi
+              </p>
+
+              <p style="margin-top:10px;">
+                <strong>Ce que l’organisation me demande :</strong>
+                <br />- coordonner les partenaires : centre Eugène Marquis, Maison Jaïa, Réseau des bénévoles de LADAPT, Ligue contre le cancer, CCAS
+                <br />- rédiger la présentation du projet et les supports à destination des habitants et des entreprises
+                <br />- rechercher des mécènes et des sponsors, et construire le budget
+                <br />- préparer la logistique : lieu, horaires, intervenants, inscriptions
+                <br />- organiser la collecte des dons, reversés à la Maison Jaïa et à la Ligue contre le cancer
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Action sociale</span>
+                <span class="chip">Collectivité locale</span>
+                <span class="chip">Citoyenneté</span>
+                <span class="chip">Entraide</span>
+                <span class="chip">Organisation d’événement</span>
+                <span class="chip">Partenariats</span>
+                <span class="chip">Mécénat</span>
+                <span class="chip">Prévention santé</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- ── Card LADAPT ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true" style="font-size:0.75rem; font-weight:700; text-align:center; line-height:1.25; padding:6px;">Réseau des bénévoles</div>
+              <div>
+                <div class="project-title">
+                  <h3>Réseau des Bénévoles LADAPT — Ille-et-Vilaine</h3>
+                  <span class="tag">Engagement</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                Le réseau des bénévoles de LADAPT soutient les personnes en situation de handicap et leurs familles depuis plus de 25 ans : parrainage, accompagnement vers l’emploi, sensibilisation.
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Actions en Ille-et-Vilaine :</strong>
+                <br />- soutien à l’insertion professionnelle : parrainages, accompagnements personnalisés, entretiens-conseils
+                <br />- participation à des événements : SEEPH, Forum emploi, Job Dating, Handicafé
+                <br />- travail en réseau pour le suivi des parrainés et le partage d’expérience
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Grâce au réseau :</strong> j’ai pu me former aux Premiers Secours en Santé Mentale (PSSM), pour mieux accueillir et orienter les personnes en situation de fragilité.
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Bénévolat</span>
+                <span class="chip">Handicap</span>
+                <span class="chip">Accompagnement</span>
+                <span class="chip">Événements</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- ── Card Témoignages ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true">TÉM</div>
+              <div>
+                <div class="project-title">
+                  <h3>Témoignages — OncoBretagne &amp; LADAPT</h3>
+                  <span class="tag">Témoignage</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>OncoBretagne — Journée régionale des Soins Oncologiques de Support</strong>
+                <br />22 mars 2024, Palais des Congrès de Lorient. J’ai été invitée à partager mon vécu des soins de support devant des professionnels de santé, soignants et patients, pour encourager chacun à ne pas avoir peur d’y aller.
+              </p>
+              <p style="margin-top:10px;">
+                <strong>LADAPT — Convention nationale Handicap &amp; emploi 2026</strong>
+                <br />Table ronde avec LADAPT, France Travail, Cap emploi, l’Agefiph et le FIPHFP, pour témoigner de ce que le Dispositif de Financement d’Accompagnement (DFA) apporte concrètement : coordination avec l’école, aménagements de poste, suivi, préparation des examens.
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Prise de parole</span>
+                <span class="chip">Table ronde</span>
+                <span class="chip">Inclusion</span>
+                <span class="chip">RQTH</span>
+              </div>
+            </div>
+          </details>
+
+          <!-- ── Card Humanitaire ── -->
+          <details class="project" role="listitem">
+            <summary>
+              <div class="project-visual" aria-hidden="true">HUM</div>
+              <div>
+                <div class="project-title">
+                  <h3>Mission humanitaire — Monplaisir Solidarité<br /><span style="font-weight:400; font-size:0.9rem;">Santé bucco-dentaire · villages de montagne · Afrique</span></h3>
+                  <span class="tag">Humanitaire</span>
+                </div>
+                <div class="project-hint"><span class="when-closed">Voir plus</span><span class="when-open">Réduire</span></div>
+              </div>
+            </summary>
+            <div class="project-body">
+              <p>
+                <strong>Contexte :</strong> mission de terrain dans des villages de montagne en Afrique : prévention pour les mamans et les enfants, et soins bucco-dentaires dans des zones avec peu d’accès aux soins.
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Actions concrètes :</strong>
+                <br />- sensibilisation des enfants et des mamans au brossage des dents
+                <br />- distribution de brosses à dents et de dentifrice
+                <br />- accueil et orientation vers le dentiste : diagnostic, soins
+                <br />- suivi individuel avec identifiant unique, statistiques transmises au ministère de la Santé
+              </p>
+              <p style="margin-top:10px;">
+                <strong>Ce que j’en retiens :</strong> un suivi administratif rigoureux (identifiant unique, statistiques, reporting) est ce qui permet de mesurer, décider et améliorer, sur le terrain comme au bureau.
+              </p>
+              <div class="meta" aria-label="Mots-clés">
+                <span class="chip">Humanitaire</span>
+                <span class="chip">Accueil</span>
+                <span class="chip">Suivi</span>
+                <span class="chip">Reporting</span>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card reveal" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Contact</h2>
+        <p>Pour échanger sur un poste, un projet ou une opportunité</p>
+      </div>
+      <div class="section-body">
+        <div class="grid-2 contact" role="list" aria-label="Coordonnées">
+          <div role="listitem">
+            <p><strong>Nom :</strong> Laëtitia Domenger</p>
+            <p style="margin-top:10px;"><strong>Téléphone :</strong> <a href="tel:+33786023646">07 86 02 36 46</a></p>
+            <p style="margin-top:10px;"><strong>Email :</strong> <a href="mailto:laetitia.domenger@gmail.com">laetitia.domenger@gmail.com</a></p>
+          </div>
+          <div role="listitem">
+            <div class="hero-actions" role="group" aria-label="Actions de contact">
+              <a class="btn btn-primary" href="mailto:laetitia.domenger@gmail.com">Envoyer un email</a>
+              <a class="btn btn-ghost" href="tel:+33786023646">Appeler</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer aria-label="Pied de page">
+      <div class="footer-inner">
+        <div>
+          Assistante administrative organisée et bienveillante, prête à apporter rigueur et sérénité au quotidien d’une équipe.
+        </div>
+        <div style="font-size:0.8rem; opacity:0.7; margin-top:6px;">
+          ✦ Ce portfolio a été conçu et structuré par mes soins, en utilisant l’IA comme outil de développement. Les choix de contenu, d’accessibilité et de design sont entièrement les miens.
+        </div>
+        <div>
+          © <span id="year">2026</span> — Laëtitia Domenger
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ══════════ SCRIPTS ══════════ -->
+  <script>
+    (function () {
+      // Année automatique
+      var yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+      // Menu mobile
+      var header = document.querySelector("header");
+      var menuBtn = document.getElementById("menuBtn");
+      var navLinks = document.getElementById("navLinks");
+
+      function setMenu(open) {
+        if (!header || !menuBtn || !navLinks) return;
+        header.setAttribute("data-open", open ? "true" : "false");
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+
+      if (menuBtn) {
+        menuBtn.addEventListener("click", function () {
+          var isOpen = header && header.getAttribute("data-open") === "true";
+          setMenu(!isOpen);
+        });
+      }
+
+      // Fermer le menu après clic sur un lien (mobile)
+      if (navLinks) {
+        navLinks.addEventListener("click", function (e) {
+          var t = e.target;
+          if (t && t.tagName === "A") setMenu(false);
+        });
+      }
+
+      // Animation légère d’apparition (IntersectionObserver)
+      var items = document.querySelectorAll(".reveal");
+      var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduced && "IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        items.forEach(function (el) { io.observe(el); });
+      } else {
+        items.forEach(function (el) { el.classList.add("is-visible"); });
+      }
+
+    })();
+  </script>
+</body>
+</html>
